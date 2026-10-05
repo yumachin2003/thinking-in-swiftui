@@ -1,0 +1,342 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SwiftUIを考える",
+    "section": "",
+    "text": "はじめに\n本書はSwifiUIの参考書である『Thinking in SwiftUI』を通読し、その内容を日本語で解説したものである。また、参考書とは別のWebページを参考に、環境構築も行なったのでその内容も含めている。",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  イントロダクション",
+    "section": "",
+    "text": "要約\n\n改訂の狙い: 現場のフィードバックを受け全面リニューアル。SwiftUIの「メンタルモデル」を根本から理解してもらうのが最大の目的だ。\n本書の役割: 公式ドキュメントにはない「概念の腹落ち」に特化。今後増え続ける新APIを、自力で追える土台を作れるはずだ。\n攻略の鍵: 自分のコードがどう「ビューツリー」になるか。まずはここを押さえるのが一番手っ取り早い。\n図解の充実: 執筆環境を刷新し、直感的にわかる図解を直接埋め込めたのは大きな収穫だった。\n最新動向: （出版当時）ギリギリで発表されたWWDC23（iOS 17等）の新要素も、きっちり区別して盛り込んでいる。\n伝えたいこと: やっぱり最強の学習法は「自分で書く」こと。本書を片手に、どんどん手を動かして実感していくのが間違いない。\n\n\n\n全文日本語訳\nSwiftUIが登場した当初、それはUIKitとは根本的に異なるものでした。本書の第1版は、読者の皆さんがSwiftUIの仕組みに関するメンタルモデルを構築できるよう支援することを目的として執筆されました。それから数年が経ち、私たちは大小さまざまな開発チームに対してこの内容を指導する機会を得ました。その過程で、ワークショップでのフィードバックをもとに、SwiftUIの基礎を解説するアプローチを継続的に改善・洗練させてきました。『Thinking in SwiftUI』のこの新版は、その道のりの成果です。ワークショップでSwiftUIを指導する方法に合わせ、本書を根本から全面的に書き直しました。\nAppleのSwiftUI APIドキュメントはここ数年で大幅に改善されましたが、それでもなお、SwiftUIの仕組みを説明する概念的なドキュメントには需要があると考えています。初版と同様、これが本書の焦点であり続けています。SwiftUIに対する確固たる概念的な理解を深めていただき、絶えず拡大し続けるプラットフォーム固有のAPIについて、ご自身で学べるようになることを願っています。\nSwiftUIを効率的に扱う上で重要なのは、記述したコードがどのようにビューツリーに変換されるかを理解することだと考えています。第1章ではこの点を詳細に解説し、その後、これらのビューツリーが状態、レイアウト、アニメーションなどの観点からどのように解釈されるかについて論じていきます。\nこの目的のため、本書の生成インフラを全面的に刷新したこともあり、今版では視覚的な解説をさらに充実させました。LaTeXベースのワークフローから、純粋なSwift/TextKitベースのツールへと移行したことで、SwiftUIビューを本書に直接埋め込むことが可能になりました。これによりツールチェーンが簡素化されただけでなく、本来ならやや抽象的になりがちな概念の理解を助ける多くの図やイラスト、プレビューを生成することができました。\n本書の編集作業を終えようとしていた頃、WWDC23が開催され、Appleは一連の新しいSwiftUI APIや更新されたAPIを発表しました。本書の随所に、これらの新しいAPIに関する解説を追加しましたが、iOS 17専用のAPI（macOS 14や同時にリリースされた他のプラットフォームも含む）を使用している箇所については、明示的に記載するように配慮しました。\n私たちのワークショップで何度も確認してきたように、SwiftUIを学ぶ最良の方法は、自分でコードを書くことです。本書はその代わりにはなりませんが、役立つガイドとなることを目指しています。本書で学んだことを定期的に実践することをお勧めします。実際に試してみて、仕組みを自分の目で確認することほど、理解を定着させるものはありません。\n本書の執筆に協力してくださったすべての方々に感謝申し上げます。校正を担当してくれたNatalye、技術レビューを行ってくれたOle、そしてTextKitのサポートをしてくれたMarcinに感謝します。また、ワークショップの改善に協力してくれたRobb、Ole、Juulにも感謝します。彼らの協力のおかげで、本書の質も向上しました。さらに、これまでの書籍の読者やワークショップの参加者からいただいたすべてのフィードバックに感謝します。そして最後に、SwiftUIの開発者の方々に心からの感謝を捧げます。\n── Florian・Chris",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>イントロダクション</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  要約",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>要約</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "intro.html#要約",
+    "href": "intro.html#要約",
+    "title": "1  イントロダクション",
+    "section": "",
+    "text": "改訂の狙い: 現場のフィードバックを受け全面リニューアル。SwiftUIの「メンタルモデル」を根本から理解してもらうのが最大の目的だ。\n本書の役割: 公式ドキュメントにはない「概念の腹落ち」に特化。今後増え続ける新APIを、自力で追える土台を作れるはずだ。\n攻略の鍵: 自分のコードがどう「View Tree」になるか。まずはここを押さえるのが一番手っ取り早い。\n図解の充実: 執筆環境を刷新し、直感的にわかる図解を直接埋め込めたのは大きな収穫だった。\n最新動向: ギリギリで発表されたWWDC23（iOS 17等）の新要素も、きっちり区別して盛り込んでいる。\n伝えたいこと: やっぱり最強の学習法は「自分で書く」こと。本書を片手に、どんどん手を動かして実感していくのが間違いない。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>イントロダクション</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#全文日本語訳",
+    "href": "intro.html#全文日本語訳",
+    "title": "1  イントロダクション",
+    "section": "全文日本語訳",
+    "text": "全文日本語訳\nSwiftUIが登場した当初、それはUIKitとは根本的に異なるものでした。本書の第1版は、読者の皆さんがSwiftUIの仕組みに関するメンタルモデルを構築できるよう支援することを目的として執筆されました。それから数年が経ち、私たちは大小さまざまな開発チームに対してこの内容を指導する機会を得ました。その過程で、ワークショップでのフィードバックをもとに、SwiftUIの基礎を解説するアプローチを継続的に改善・洗練させてきました。『Thinking in SwiftUI』のこの新版は、その道のりの成果です。ワークショップでSwiftUIを指導する方法に合わせ、本書を根本から全面的に書き直しました。\nAppleのSwiftUI APIドキュメントはここ数年で大幅に改善されましたが、それでもなお、SwiftUIの仕組みを説明する概念的なドキュメントには需要があると考えています。初版と同様、これが本書の焦点であり続けています。SwiftUIに対する確固たる概念的な理解を深めていただき、絶えず拡大し続けるプラットフォーム固有のAPIについて、ご自身で学べるようになることを願っています。\nSwiftUIを効率的に扱う上で重要なのは、記述したコードがどのようにビューツリーに変換されるかを理解することだと考えています。第1章ではこの点を詳細に解説し、その後、これらのビューツリーが状態、レイアウト、アニメーションなどの観点からどのように解釈されるかについて論じていきます。\nこの目的のため、本書の生成インフラを全面的に刷新したこともあり、今版では視覚的な解説をさらに充実させました。LaTeXベースのワークフローから、純粋なSwift/TextKitベースのツールへと移行したことで、SwiftUIビューを本書に直接埋め込むことが可能になりました。これによりツールチェーンが簡素化されただけでなく、本来ならやや抽象的になりがちな概念の理解を助ける多くの図やイラスト、プレビューを生成することができました。\n本書の編集作業を終えようとしていた頃、WWDC23が開催され、Appleは一連の新しいSwiftUI APIや更新されたAPIを発表しました。本書の随所に、これらの新しいAPIに関する解説を追加しましたが、iOS 17専用のAPI（これはmacOS 14や同時にリリースされた他のプラットフォームも対象となります）を使用している箇所については、明示的に記載するように配慮しました。\n私たちのワークショップで何度も確認してきたように、SwiftUIを学ぶ最良の方法は、自分でコードを書くことです。本書はその代わりにはなりませんが、役立つガイドとなることを目指しています。本書で学んだことを定期的に実践することをお勧めします。実際に試してみて、仕組みを自分の目で確認することほど、理解を定着させるものはありません。\n本書の執筆に協力してくださったすべての方々に感謝申し上げます。校正を担当してくれたNatalye、技術レビューを行ってくれたOle、そしてTextKitのサポートをしてくれたMarcinに感謝します。また、ワークショップの改善に協力してくれたRobb、Ole、Juulにも感謝します。彼らの協力のおかげで、本書の質も向上しました。さらに、これまでの書籍の読者やワークショップの参加者からいただいたすべてのフィードバックに感謝します。そして最後に、SwiftUIの開発者の方々に心からの感謝を捧げます。\nFlorian・Chris",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>イントロダクション</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#検索",
+    "href": "index.html#検索",
+    "title": "SwiftUIを考える",
+    "section": "検索",
+    "text": "検索\n左上（サイドバーの上、スマートフォン等で閲覧している場合には右上）に検索ツールがある。この文書全体から検索ができるので、特定の項目について調べたいときに使用してほしい。",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#書籍の紹介",
+    "href": "index.html#書籍の紹介",
+    "title": "SwiftUIを考える",
+    "section": "書籍の紹介",
+    "text": "書籍の紹介\nThinking in SwiftUI ー Updated for iOS 17\n\n\n著者: Chris Eidhof、Florian Kugler\nページ数: 170ページ\n出版社: objc.io\n出版日: 2023年6月\nISBN: 9798397246682",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "view-trees.html",
+    "href": "view-trees.html",
+    "title": "2  ビューツリー",
+    "section": "",
+    "text": "2.1 ビュービルダー\nビューツリーはSwiftUIを理解する上で最も基本的で重要な概念である。ビューツリーを理解することで、SwiftUIがどのように画面を描画しているのかを理解することができる。 そもそもビューツリーとは「UIの設計図」であり、レンダリングされるたびに別のビューツリーが生成されるようになっている。\n例として、以下の2つを見ていく。\nビューツリーは、実際のコードのモディファイア1の連なりを下から上に解釈する。①の場合で言うと、Textが.paddingや.backgroundにどんどん包まれていくイメージである。上の2つの例から.padding()と.background()を入れ替えただけでも、描画結果のようにUIに差異が生じてくるのがわかるだろう。このように、モディファイアを適用する順序によって構築されるビューツリーの親子関係（階層構造）が変わり、UIの描画結果も変化する。\n意図通りのレイアウトや装飾を実現するためには、単にモディファイアを並べるのではなく、モディファイアによってどのようなビューツリーが構築されているのかを常に意識することが重要である。\n上の例では1つのビュー2のみの場合だったが、2つ以上ある場合はビュービルダーという構文が使われる。\n上の例でいう、HStack { ... }の{ ... }の部分がビュービルダーである。この構文は各ビューをリストとして扱っている。\n{ ... }の部分は少し特殊であり、Swiftにおいてクロージャ3として扱われる。さらにこのクロージャには@ViewBuilderという属性（アトリビュート）がついているので、各ビューをカンマ（,）で区切ることなく、体系的にビューを記述できる。\nもし、ビュービルダーを使わなかったら、以下のように配列としてパラメータ関数に格納して渡す形なるだろう。\nSwift\n\nHStack(views: [\n    Image(systemName: \"hand.wave\"),\n    Text(\"Hello\")\n])\nSwiftUIでは複数のビューを組み合わせるコンテナビューが頻繁に使われるが、その都度引数として配列を渡す設計では、コードの肥大化や可読性の低下を招いてしまう。ビュービルダーは、並べられた複数のビューを裏側でタプルビュー4としてまとめ上げ、コンテナビューへ渡すことで、直感的で宣言的なコード記述を可能にしている。",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>ビューツリー</span>"
+    ]
+  },
+  {
+    "objectID": "create-env.html",
+    "href": "create-env.html",
+    "title": "Swiftの環境構築",
+    "section": "",
+    "text": "Xcodeとは\nSwift言語でのiOSアプリ開発は、Apple公式の統合開発環境であるXcodeを用いるのが基本である。\nXcodeは、Appleが無料で提供している公式の統合開発環境（IDE）である。iOS、macOS、watchOS、tvOS向けのアプリケーションや、Swiftを用いた開発において標準的に使用される。\nXcodeには、単なるコードエディタだけでなく、以下のような開発に必要なすべての機能が組み込まれている。\niOSアプリ開発を含む、本格的なAppleプラットフォーム向け開発を行う場合、基本的にXcodeのインストールが必須である。",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#sweetpadの導入",
+    "href": "create-env.html#sweetpadの導入",
+    "title": "Swiftの環境構築",
+    "section": "Sweetpadの導入",
+    "text": "Sweetpadの導入",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#sweetpadとは",
+    "href": "create-env.html#sweetpadとは",
+    "title": "Swiftの環境構築",
+    "section": "Sweetpadとは",
+    "text": "Sweetpadとは\nSweetPadとは、VS Codeまたはそれを基としたIDEで、Swiftプロジェクトを開発できるようにする拡張機能である。Xcodeの代替手段を目指して開発されている。\n\nSweetPad (iOS/Swift development) - Visual Studio Marketplace",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#フォーマッターの確認",
+    "href": "create-env.html#フォーマッターの確認",
+    "title": "Swiftの環境構築",
+    "section": "フォーマッターの確認",
+    "text": "フォーマッターの確認\n\nswift-format\nswift-formatは、Swiftコードの自動整形や構文チェックを行う、Apple公式のツール。Web開発で使うPrettierやESLintのSwift版のようなものである。\nXcodeをインストール済みならすでにインストールされているはずだが、以下のコマンドで確認できる。\n\n\n\nzsh\n\nxcrun --find swift-format",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#swift拡張機能のインストール-1",
+    "href": "create-env.html#swift拡張機能のインストール-1",
+    "title": "Swiftの環境構築",
+    "section": "Swift拡張機能のインストール",
+    "text": "Swift拡張機能のインストール\nVS Code系IDEにSwift言語をサポートするためには、Swift拡張機能をインストールする必要がある。\nSwift",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#sweetpadとは-1",
+    "href": "create-env.html#sweetpadとは-1",
+    "title": "Swiftの環境構築",
+    "section": "Sweetpadとは",
+    "text": "Sweetpadとは\nSweetPadとは、VS Codeまたはそれを基としたIDEで、Swiftプロジェクトを開発できるようにする拡張機能である。Xcodeの代替手段を目指して開発されている拡張機能である。\nSweetpadは以下のリンクから入手可能である。\nSweetPad (iOS/Swift development) - Visual Studio Marketplace",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#フォーマッターの確認-1",
+    "href": "create-env.html#フォーマッターの確認-1",
+    "title": "Swiftの環境構築",
+    "section": "フォーマッターの確認",
+    "text": "フォーマッターの確認\n\nswift-format\nswift-formatは、Swiftコードの自動整形や構文チェックを行う、Apple公式のツール。Web開発で使うPrettierやESLintのSwift版のようなものである。\nXcodeをインストール済みならすでにインストールされているはずだが、以下のコマンドで確認できる。\n\n:::",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#フォーマッターの設定",
+    "href": "create-env.html#フォーマッターの設定",
+    "title": "Swiftの環境構築",
+    "section": "フォーマッターの設定",
+    "text": "フォーマッターの設定\n\nswift-format\nswift-formatは、Swiftコードの自動整形や構文チェックを行う、Apple公式のツール。Web開発で使うPrettierやESLintのSwift版のようなものである。\nXcodeをインストール済みならすでにインストールされているはずだが、以下のコマンドで確認できる。\n\n\n\nzsh\n\nxcrun --find swift-format\n\n\n\n\nツールチェーン\n\n\n\n\n\n\nヒントツールチェーンとは\n\n\n\n\n\nツールチェーンとは、人間が書いたソースコードを機械が実行できるプログラムへと変換する開発ツールの集合体のことである。コンパイラやリンカ、デバッガなどがこれにあたる。\n\n\n\n拡張機能に認識させるツールチェーンを指定する。を選択すると、コマンドパレットが表示されるので、Swift: Select Toolchain...を検索する。\n\nツールチェーンを選択する画面になるので、Xcodeを選択する。\n\n\n\n\n\n\n\nノートXcodeとCommandLineToolの違い\n\n\n\nXcodeはシミュレーターや画面のレイアウトツールなど、開発に必要なものが全部詰まってるフルセット。一方でCommandLineToolはコンパイラやリンカ、デバッガなどの最低限のツールを提供するようになるセット。\n\n\n最後に以下のような警告画面が出るので、「Reload Extensions」をクリックして再起動する。\n\n\n\n\n\n\nChanging the Swift path requires Visual Studio Code be reloaded.",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#ツールチェーン関連",
+    "href": "create-env.html#ツールチェーン関連",
+    "title": "Swiftの環境構築",
+    "section": "ツールチェーン関連",
+    "text": "ツールチェーン関連\n\n\n\n\n\n\nヒントツールチェーンとは\n\n\n\n\n\nツールチェーンとは、人間が書いたソースコードを機械が実行できるプログラムへと変換する開発ツールの集合体のことである。コンパイラやリンカ、デバッガなどがこれにあたる。\n\n\n\n拡張機能に認識させるツールチェーンを指定する。を選択すると、コマンドパレットが表示されるので、Swift: Select Toolchainを検索する。\n\nツールチェーンを選択する画面になるので、Xcodeを選択する。\n\n\n\n\n\n\n\nノート\n\n\n\nXcodeはシミュレーターや画面のレイアウトツールなど、開発に必要なものが全部詰まってるフルセット。一方でCommandLineToolはコンパイラやリンカ、デバッガなどの最低限のツールを提供するようになるセット。\n\n\n最後に以下のような警告画面が出るので、「Reload Extensions」をクリックして再起動する。\n\n\n\n\n\n\nChanging the Swift path requires Visual Studio Code be reloaded.",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#swiftプロジェクトの雛形の作成",
+    "href": "create-env.html#swiftプロジェクトの雛形の作成",
+    "title": "Swiftの環境構築",
+    "section": "Swiftプロジェクトの雛形の作成",
+    "text": "Swiftプロジェクトの雛形の作成\nSwift拡張機能でプロジェクトの雛形を作成する。からコマンドパレットを開き、Swift: Create Project...を検索する。\n\n次にテンプレートを選択する画面になるので、Executable（実行可能）を選択する。\n\nEnter a name for your new swift projectと表示されたら、プロジェクト名を入力して、Enterを押す。\nその後、Would you like to open (プロジェクト名)?と表示されるのでOpenを選択すると、以下のようなファイル構成のプロジェクトが表示される。",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#sweetpad拡張機能のインストール",
+    "href": "create-env.html#sweetpad拡張機能のインストール",
+    "title": "Swiftの環境構築",
+    "section": "Sweetpad拡張機能のインストール",
+    "text": "Sweetpad拡張機能のインストール\nSweetPadとは、VS Codeまたはそれを基としたIDEで、Swiftプロジェクトを開発できるようにする拡張機能である。Xcodeの代替手段を目指して開発されている。\n\nSweetPad (iOS/Swift development) - Visual Studio Marketplace",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#swift拡張機能のインストール",
+    "href": "create-env.html#swift拡張機能のインストール",
+    "title": "Swiftの環境構築",
+    "section": "",
+    "text": "ヒントVS Code以外のIDEでストアを検索しても出てこない場合\n\n\n\n\n\nAntigravity IDEでストアのソースをVisual Studio Marketplaceに変更したのに、Swift拡張機能がヒットしなかったので、VS Codeで拡張機能をVSIXファイルに書き出し、Antigravity IDEに手動でインストールした。\nVS Codeで拡張機能ページを開き、⚙️アイコン ＞ 「VSIXのダウンロード」を選択。\n\n次にAntigravity IDEを開き、拡張機能タブの「…」メニューから「VSIXからのインストール…」を選択。",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#sweetpad",
+    "href": "create-env.html#sweetpad",
+    "title": "Swiftの環境構築",
+    "section": "Sweetpad",
+    "text": "Sweetpad\nSweetPadとは、VS Codeまたはそれを基としたIDEで、Swiftプロジェクトを開発できるようにする拡張機能である。Xcodeの代替手段を目指して開発されている。\n\nなぜSweetpadが必要なのか\n公式の「Swift」拡張機能だけでもコード補完や基本的なビルドは可能だが、iOSアプリやSwiftUIを使った開発においては「SweetPad」を併用する方が便利である。その主な理由は以下の通りである。\n\niOSシミュレータ/実機の管理：VS CodeのUI上から直接シミュレータを起動し、アプリをビルド・実行できるようになる。\nXcodeライクなUI：プロジェクトのターゲットやスキームの選択など、本来Xcodeで行うような操作をVS Code上で直感的に行える。\n開発体験の向上：公式のSwift拡張機能が言語としてのサポート（Swift Package Managerなど）を担うのに対し、SweetPadは「アプリ開発」に特化したワークフローを補完してくれる。\n\n\n\n\nSweetpad拡張機能のインストール\n\nSweetPad (iOS/Swift development) - Visual Studio Marketplace",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#swiftファイルの実行",
+    "href": "create-env.html#swiftファイルの実行",
+    "title": "Swiftの環境構築",
+    "section": "Swiftファイルの実行",
+    "text": "Swiftファイルの実行\n基本的には、Swift拡張機能がプロジェクトを解析し、実行可能なエントリーポイントを自動的に検知する。検知されると、エディタ上の該当コード上部に「Run」や「Debug」といったボタンが表示され、クリック一つで実行できるようになる。\n\n\n\n\n\n\n\nヒントエントリーポイントとは\n\n\n\n\n\nプログラムを実行した際に、最初に処理が開始される「スタート地点」のことである。\nSwiftにおいてエントリーポイントを定義するには、主に以下の2つの方法がある。\n\nmain.swift ファイルを使う場合 ファイル名がmain.swiftの場合、そのファイルに書かれたコードが上から順番に実行される。このとき、ファイル全体がエントリーポイントとみなされる。\n@main 属性を使う場合 特定の構造体（stract）やクラスに@mainという属性を付けることで、そこをスタート地点として指定できる。最近のSwiftUIアプリや新しいプロジェクトの書き方では、この方法が主流となっている。\n\n\n\n\n\n\n実行結果。デバッグコンソールにHello, world!と表示された",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#swift言語の構造",
+    "href": "create-env.html#swift言語の構造",
+    "title": "Swiftの環境構築",
+    "section": "Swift言語の構造",
+    "text": "Swift言語の構造",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#swiftプロジェクトの構造",
+    "href": "create-env.html#swiftプロジェクトの構造",
+    "title": "Swiftの環境構築",
+    "section": "Swiftプロジェクトの構造",
+    "text": "Swiftプロジェクトの構造\nSwiftプロジェクト（特にSwift Package Managerを用いたもの）の構成を理解する上で、以下の用語を知っておくとスムーズである。\n\n\n\n\n\n\n\n用語\n意味\n\n\n\n\nパッケージ（Package）\nSwiftにおけるコードの管理・配布の基本単位。現在作成しているプロジェクト全体が1つの「パッケージ」として扱われる。\n\n\nターゲット（Target）\nアプリ本体（実行可能ファイル）、共通部品（ライブラリ）、テストコードなど、個別にビルドされるコードの「まとまり」のこと。1つのパッケージ内に複数のターゲットを含めることができる。\n\n\nプロダクト（Product）\nターゲットをビルドして最終的にできあがる成果物のこと。外部から利用できるライブラリや、ユーザーが利用するアプリなどがこれにあたる。\n\n\n\nSwiftの標準的な実行可能プロジェクトは、主に以下のようなファイル・フォルダ構成となっている。\n\n\n\n\n\ngraph TD\n    Project[\"プロジェクトルート\"]\n    Project --&gt; PackageSwift[\"📄 Package.swift\"]\n    Project --&gt; Sources[\"📁 Sources\"]\n    Project --&gt; Tests[\"📁 Tests\"]\n    \n    Sources --&gt; TargetDir[\"📁 ターゲット名フォルダ\"]\n    TargetDir --&gt; MainSwift[\"📄 main.swift\"]\n    \n    style Project fill:#f9f9f9,stroke:#333,stroke-width:2px\n    style PackageSwift fill:#e8f4f8,stroke:#03a9f4\n    style Sources fill:#fff9c4,stroke:#fbc02d\n    style Tests fill:#e8f5e9,stroke:#4caf50\n\n\n\n\n\n\n\nPackage.swift プロジェクト全体の設定ファイル。使用する外部パッケージ（ライブラリ）や、実行可能ファイル・テストなどの「ターゲット」を定義する。（Node.jsにおける package.json のような役割）\nSources フォルダ 実際のプログラムのソースコード（.swift）を配置する場所。この中のコードがコンパイルされ、最終的なプログラムになる。\nTests フォルダ プログラムが想定通りに動くかを自動で検証するための「テストコード」を配置する場所。",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#swiftプロジェクトとxcodeプロジェクト",
+    "href": "create-env.html#swiftプロジェクトとxcodeプロジェクト",
+    "title": "Swiftの環境構築",
+    "section": "SwiftプロジェクトとXcodeプロジェクト",
+    "text": "SwiftプロジェクトとXcodeプロジェクト\nSwiftプロジェクト（拡張子.swift）は「プラットフォームに依存しない純粋なSwiftコードやライブラリの構成」で、Xcodeプロジェクト（拡張子.xcodeproj）は、Swiftプロジェクトのうち「Apple端末（iOS・macOS等）で動くアプリをビルド・配信するための専用構成」である。",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#代替手段vs-codeを用いた環境構築",
+    "href": "create-env.html#代替手段vs-codeを用いた環境構築",
+    "title": "Swiftの環境構築",
+    "section": "【代替手段】VS Codeを用いた環境構築",
+    "text": "【代替手段】VS Codeを用いた環境構築\nXcodeは高機能な反面、動作が重く感じることもある。また、普段からVS Codeなどの汎用エディタに慣れ親しんでいる開発者も多い。 そこで、代替手段としてVS Code（またはそれを基にしたAntigravity IDE）と「Sweetpad」拡張機能も導入したので手順を示す。\n\nSweetPadの導入\nSweetPadとは、VS Code等でSwiftプロジェクトやiOSアプリを開発できるようにする、Xcodeの代替を目指して開発されている拡張機能である。\n\nなぜSweetPadが必要なのか\n公式の「Swift」拡張機能だけでもコード補完や基本的なビルドは可能だが、iOSアプリやSwiftUIを使った開発においては「SweetPad」をメインで利用する方が圧倒的に便利である。主な理由は以下の通り。\n\niOSシミュレータ/実機の管理：VS CodeのUI上から直接シミュレータを起動し、アプリをビルド・実行できる。\nXcodeライクなUI：プロジェクトのターゲットやスキームの選択など、本来Xcodeで行うような操作をVS Code上で直感的に行える。\n開発体験の向上：公式のSwift拡張機能が言語としてのサポート（Swift Package Managerなど）を担うのに対し、SweetPadは「アプリ開発」に特化したワークフローを補完してくれる。\n\n\n\n\nSweetPadとSwift拡張機能のインストール\nSweetPadとSwift拡張機能は、VS Codeの拡張機能として以下からダウンロード可能である。\n\n\n\nSweetPad (iOS/Swift development) - Visual Studio Marketplace\n\n\n\nSwift - Visual Studio Marketplace\n\n\n\n\n\n\n\n\nヒントVS Code以外のIDEでストアを検索しても出てこない場合\n\n\n\n\n\nVS CodeベースのAntigravity IDEでストアのソースをVisual Studio Marketplaceに変更したのに、Swift拡張機能がヒットしなかったので、VS Codeで拡張機能をVSIXファイルに書き出し、Antigravity IDEに手動でインストールした。\nVS Codeで拡張機能ページを開き、アイコン ＞ 「VSIXのダウンロード」を選択。\n\n次にAntigravity IDEを開き、拡張機能タブの「…」メニューから「VSIXからのインストール…」を選択。\n\n\n\n\n\n\n\nフォーマッターとツールチェーンの設定\n\nswift-format\nswift-formatは、Swiftコードの自動整形や構文チェックを行う、Apple公式のツール。Web開発で使うPrettierやESLintのSwift版のようなものである。\nXcodeをインストール済みならすでにインストールされているはずだが、以下のコマンドで確認できる。\n\n\n\nzsh\n\nxcrun --find swift-format\n\n\n\n\nツールチェーン\n\n\n\n\n\n\nヒントツールチェーンとは\n\n\n\n\n\nツールチェーンとは、人間が書いたソースコードを機械が実行できるプログラムへと変換する開発ツールの集合体のことである。コンパイラやリンカ、デバッガなどがこれにあたる。\n\n\n\n拡張機能に認識させるツールチェーンを指定する。を選択すると、コマンドパレットが表示されるので、Swift: Select Toolchain...を検索する。\n\nツールチェーンを選択する画面になるので、Xcodeを選択する。\n\n\n\n\n\n\n\nノートXcodeとCommandLineToolの違い\n\n\n\nXcodeはシミュレーターや画面のレイアウトツールなど、開発に必要なものが全部詰まってるフルセット。一方でCommandLineToolはコンパイラやリンカ、デバッガなどの最低限のツールを提供するようになるセット。\n\n\n最後に以下のような警告画面が出るので、「Reload Extensions」をクリックして再起動する。\n\n\n\n\n\n\nChanging the Swift path requires Visual Studio Code be reloaded.",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#xcodeとは",
+    "href": "create-env.html#xcodeとは",
+    "title": "Swiftの環境構築",
+    "section": "",
+    "text": "コンパイラ・デバッガ: 書いたプログラムを実際に動くアプリに変換したり、エラー（バグ）を見つけて直したりするための機能。\nInterface Builder・SwiftUI Previews: ボタンやテキストなどの画面デザインを、プレビューを見ながら直感的に作れる機能。\nSimulator（シミュレータ）: 手元に本物のiPhoneやiPadがなくても、Macの画面上に仮想のiPhoneを映してアプリをテストできる機能。\nInstruments: アプリの動作が重くないか、メモリを使いすぎていないかをチェックする分析ツール。\n\n\n\nXcodeの画面。Apple Newsroomより引用",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#xcodeのインストール",
+    "href": "create-env.html#xcodeのインストール",
+    "title": "Swiftの環境構築",
+    "section": "Xcodeのインストール",
+    "text": "Xcodeのインストール\n公式の方法を用いたXcodeのインストールには、2つの方法がある。\n▼ タブのタイトルをクリックして内容を切り替え\n\nApp StoreからApple Developerサイトから\n\n\nXcodeの最新版は、通常のアプリケーション同様に、App Store（WindowsでいうMicrosoft Store）からインストールすることができる。\nXcode - App Store\n\nしかし、App Store版のXcodeはAppleシリコン版しか配信されておらず、私のMacbookのようにIntelプロセッサで動くMacは別の方法でインストールする必要がある1。\n以前ユニバーサル版（Intelプロセッサ対応のもの）は個人的にApp Storeからインストールしており、Xcodeもバージョン26.3のものが入っていたのだが、最新版は26.62であるため、別の方法でアップデート（インストール）した。\n\n\nApple Developerサイトでは、Appleシリコン版だけでなくユニバーサル版もダウンロード可能である。\n\n上の画像のように、赤枠の「Xcode 26.6 Universal &gt;」の部分をクリックすると、Xcode_26.6_Universal.xipというファイルがダウンロードされる。\nインストールされたら開き、ファイルを展開する3と、Xcode.appが生成される。\n\n\n展開後のXcode.app\n\n\n\nこのXcode.appをアプリケーションフォルダ（/Applications）に移動すると、インストールが完了する。\n\n\n\n\n「Xcodes」によるバージョン管理\n\nApple Developerサイトから手動でインストールする方法は、アップデートのたびにサイトを開いてファイルをダウンロードする必要があり、少々手間がかかる。一方でApp Store版は、常に最新の1バージョンしか手元に残せないという欠点がある。実際の開発現場では、プロジェクトの要件やチーム内でのバージョン統一、あるいは古いiOSでの動作検証などの理由で、過去の特定バージョンやベータ版を複数使い分けたいケースが多々発生する。こうした不便さを解消し、複数バージョンのXcodeを簡単に管理できるのが「Xcodes」というツールである。\n\n\n\n\n\n\n重要\n\n\n\nXcodesは非公式ツールであるため、利用にはリスクを伴うことに留意する。\n\nセキュリティ上の懸念: Xcodesはファイルのダウンロードや展開を自動で行うが、過去にはその仕組みの隙を突かれ、不正なファイルのダウンロードやデータの改ざんを許してしまう脆弱性が指摘されたことがある。また、そもそも非公式の経路からXcodeを入手すること自体にリスクがある。Xcodesでの事例ではないが、2015年には非公式のクラウドストレージからダウンロードしたXcodeに悪意のあるコードが仕込まれており、それを使ってビルドされたWeChatなどの有名アプリにマルウェアが混入する深刻な事件も起きている4。\nアカウント情報の漏洩: XcodesはユーザーのApple Accountのログイン情報を保存し、Appleのサーバーと認証を行う。万が一ツール自体に脆弱性や悪意のあるコードが含まれていた場合、アカウント情報が漏洩するリスクが存在する。\nApple Developerアカウント利用規約の抵触: そもそも非公式の管理アプリを使用することで、Apple Developer Programの規約に抵触し、アカウントが停止（垢BAN）される可能性がある。\n\n\n\n\n\nXcodeのセットアップ\nXcode.appを開くと、最初にXcodeの利用に関する「Xcode and Apple SDKs Agreement」のライセンス契約内容が表示されるので、「Agree」を押して同意する。\nその後、コンポーネントのインストール画面が表示されるので、チェックをつけて「Install」を押す。macOSはビルトインなのでマスト、今回はiOSアプリの開発のためiOSにもチェックをつける。あとは任意。\n\nその後、インストールの許可画面が表示されるので、Touch IDで管理者認証をする（左図）と、コンポーネントのインストールが開始される（右図）。\n\n\n\n\n\n\n\n\nコンポーネントのインストールが完了し、下図のようなスタート画面が表示されれば、Xcodeのセットアップは完了である。",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "index.html#spec",
+    "href": "index.html#spec",
+    "title": "SwiftUIを考える",
+    "section": "環境",
+    "text": "環境",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "create-env.html#footnotes",
+    "href": "create-env.html#footnotes",
+    "title": "Swiftの環境構築",
+    "section": "",
+    "text": "どうりでApp Storeで検索しても結果に表示されないわけである。↩︎\n2026年9月6日時点。↩︎\n認証情報の確認と高圧縮率により、展開が完了するまで5〜10分程度かかる。↩︎\n「Allegedly 40 apps on App Store are infected - kaspersky daily」より。2026年9月7日閲覧。↩︎\nアセットカタログは、さまざまな画面サイズや解像度ごとの画像、ダークモード用の色設定などを一元管理できるXcodeの便利な機能。↩︎",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "create-env.html#xcodeプロジェクトの構造",
+    "href": "create-env.html#xcodeプロジェクトの構造",
+    "title": "Swiftの環境構築",
+    "section": "Xcodeプロジェクトの構造",
+    "text": "Xcodeプロジェクトの構造\nXcodeでiOSアプリのプロジェクトを作成すると、Swift単体のプロジェクトとは異なる特有のファイル構成になる。 設定や構造を理解する上で、以下の用語を知っておくとスムーズである。\n\n\n\n\n\n\n\n用語\n意味\n\n\n\n\nプロジェクト（Project）\nアプリの開発に必要なソースコードファイル、画像素材、設定などの集まり全体のこと。\n\n\nターゲット（Target）\nアプリ本体、テストコード、Apple Watch用アプリなど、個別にビルドされる「成果物」の単位。1つのプロジェクト内に複数のターゲットを含めることができる。\n\n\nスキーム（Scheme）\nどのターゲットを、どんな設定（デバッグ・リリースなど）でビルドし、どの環境（シミュレータ・実機）で実行するかをまとめた「実行ルール」のこと。\n\n\n\nSwiftUIを用いた標準的なiOSアプリプロジェクトは、主に以下のようなファイル・フォルダ構成となっている。\n\n\n\n\n\n\ngraph TD\n    Project{{\"プロジェクトルート\"}}\n    Project --&gt; Xcodeproj(\"〇〇.xcodeproj\")\n    Project --&gt; AppDir{{\"アプリ名フォルダ\"}}\n    \n    Xcodeproj ~~~ Dummy1[ ]\n    Xcodeproj ~~~ Dummy2[ ]\n    Xcodeproj ~~~ Dummy3[ ]\n    \n    AppDir --&gt; AppSwift[\"〇〇App.swift\"]\n    AppDir --&gt; ContentView[\"ContentView.swift\"]\n    AppDir --&gt; Assets(\"Assets.xcassets\")\n    \n    style Project fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:#000\n    style Xcodeproj fill:#e8f4f8,stroke:#03a9f4,color:#000\n    style AppDir fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:#000\n    style AppSwift fill:#ffe0b2,stroke:#ff9800,color:#000\n    style ContentView fill:#ffe0b2,stroke:#ff9800,color:#000\n    style Assets fill:#fce4ec,stroke:#e91e63,color:#000\n    style Dummy1 fill:none,stroke:none,color:transparent\n    style Dummy2 fill:none,stroke:none,color:transparent\n    style Dummy3 fill:none,stroke:none,color:transparent\n\n\n\n\n\n\n\n\n〇〇.xcodeproj: プロジェクト全体の設定や構成を管理するファイル。Xcodeで開発を行う際は、基本的にこのファイルを開く。\n〇〇App.swift: アプリの起動を司る「エントリーポイント（スタート地点）」。ここからアプリの最初の画面が呼び出される。Flaskでいうapp.pyのようなものである。\nContentView.swift: 画面の見た目を作るSwiftUIのソースコード。初期状態では「Hello, world!」と表示するコードが書かれている。\nAssets.xcassets: アプリ内で使う画像、アプリアイコン、カスタムカラーなどをまとめて管理するアセットカタログ5。",
+    "crumbs": [
+      "Swiftの環境構築"
+    ]
+  },
+  {
+    "objectID": "view-trees.html#footnotes",
+    "href": "view-trees.html#footnotes",
+    "title": "2  ビューツリー",
+    "section": "",
+    "text": "モディファイアとは、SwiftUIでビューの見た目や配置、挙動を変更・装飾するためのメソッドのこと。WebアプリにおけるCSSやJavaScriptにあたる。.padding()や.background()、.border()などのように、ビューの後ろにドットでつなげて呼び出す。↩︎\nSwiftUIでは、ReactやHTMLでいう「要素」のことをビューと呼ぶ。↩︎\nクロージャとは、処理そのものを変数や引数として手渡せる「名前のない関数」のこと。JavaScriptにおけるコールバック関数やアロー関数（() =&gt; {}のような記法）と同じ立ち位置。↩︎\nタプルビューとは、複数のビューを1つのビューとしてまとめたもの。↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>ビューツリー</span>"
+    ]
+  },
+  {
+    "objectID": "view-trees.html#ビュービルダー",
+    "href": "view-trees.html#ビュービルダー",
+    "title": "2  ビューツリー",
+    "section": "",
+    "text": "コード\n\n\n\nContentView.swift\n\nimport SwiftUI\n\nstruct ContentView: View {\n    var body: some View {\n        HStack {\n            Image(systemName: \"hand.wave\")\n            Text(\"Hello\")\n        }\n    }\n}\n\n#Preview {\n    ContentView()\n}\n\n\nビューツリー\n\nHStack\n ├── Image\n └── Text\n\n\n\n\n\n描画結果\n\n\n\n\n\n\n\n\n\n\n\n\nノート\n\n\n\nHStackはコンテナビューと呼ばれる。詳しくは第4章で学ぶ。\n\n\n\n\n\n\n\n\n\nヒント\n\n\n\n@ViewBuilderの定義部分は以下のようになっている。\n\n\n\nSwift\n\nextension ViewBuilder {\n  public static func buildBlock&lt;C0, C1&gt;(_ c0: C0, _ c1: C1) -&gt; TupleView&lt;(C0, C1)&gt; where C0 : View, C1 : View\n}\n\n\n\n\n\n\n\n\n2.1.1 サブビュー\nビュービルダーをさらに理解するために、さらにコードを拡張した例を見ていく。\n\n\nコード\n\n\n\nContentView.swift\n\nimport SwiftUI\n\nstruct ContentView: View {\n    var body: some View {\n        HStack(spacing: 20) {\n            Image(systemName: \"hand.wave\")\n            Text(\"Hello\")\n            Spacer()\n            Text(\"And Goodbye!\")\n            Image(systemName: \"hand.wave\")\n        }\n    }\n}\n\n#Preview {\n    ContentView()\n}\n\n\nビューツリー\n\nHStack\n ├── Image\n ├── Text\n ├── Spacer\n ├── Text\n └── Image\n\n\n\n\n\n描画結果\n\n\n\n\n\n現在の画面には5つのビューが並んでおり、これらはHStackの内部で展開されて表示されている。ただ、画面が複雑になってビューの数が増えると、コードが一気に肥大化して構造を追うのが難しくなってしまう。そこで、まとまりごとにサブビューとして切り出せば、余計なレイアウト階層を増やさずにコードの見通しを良くできる。\n\n\n\nSwift\n\nstruct ContentView: View {\n    @ViewBuilder var hello: some View {\n        Image(systemName: \"hand.wave\")\n        Text(\"Hello\")\n    }\n    @ViewBuilder var bye: some View {\n        Text(\"And Goodbye!\")\n        Image(systemName: \"hand.wave\")\n    }\n    var body: some View {\n        HStack(spacing: 20) {\n            hello\n            Spacer()\n            bye\n        }\n    }\n}\n\n\n\n\n2.1.2 タプルビューの透過性\nコンポーネントの定義時に@ViewBuilderを付加することで、複数のビューを含むコンポーネントを定義することができる。\nここで最も重要な原則は、「@ViewBuilderによって作られたタプルビューは、レイアウト上いかなるノード（境界や枠）も新しく生み出さない」という点にある。\n\n\n\n\n\n\nヒントサブビューに分割してもレイアウトが崩れない理由\n\n\n\n\n\n通常のUIフレームワーク（UIKitの UIView やHTMLの &lt;div&gt; など）では、コードをまとめようとして新しいコンテナやタグを挟むと、それがそのまま画面上の「階層（親ノード）」として追加されてしまう。その結果、意図しない余白やレイアウトのズレが生じることが多い。\nしかし、SwiftUIにおけるタプルビューは完全に透明な入れ物として設計されている。複数のビューをSwiftの型システム上で「1つの戻り値」として運ぶためだけの仮の小包であり、レイアウトエンジンが評価する段階では、その小包の存在感はゼロになる。\n\n\n\n開発者がコードを書くとき、HStackの直下には3つの要素が渡されているように見える。\n\n\n\n人間からの見え方\n\nhello   &lt;- サブビュー\nSpacer()\nbye     &lt;- サブビュー\n\n\nだが、SwiftUIがレイアウトを計算する際、helloとbyeの中身を包んでいるタプルビューは完全に展開される。親であるHStackから見ると、最初から以下のように5つの要素がフラットに並んでいる状態として認識される。\n\n\n\nコンピュータからの見え方\n\nImage(systemName: \"hand.wave\")\nText(\"Hello\")\n\nSpacer()\n\nText(\"And Goodbye!\")\nImage(systemName: \"hand.wave\")\n\n\nこの仕組みのおかげで、コードをいくらサブビューに切り出しても、画面の配置や余白が崩れる心配はない。HTMLの&lt;div&gt;のように余計な枠組みが勝手に増えて、意図せぬUIの崩れが起きることもない。実際、HStackのspacing: 20は画像とテキストの間にもしっかり効いている。見た目への影響を一切気にせず、純粋にコードの読みやすさのためだけに部品を小分けにできるのが大きなメリットである。我々開発者は、UIの崩れを気にせず、ただコードを読みやすくするために容易にサブビューを使うことができるのだ。",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>ビューツリー</span>"
+    ]
+  }
+]

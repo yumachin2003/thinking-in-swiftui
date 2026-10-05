@@ -1,0 +1,10 @@
+/.DS_Store
+/.quarto
+/_quarto.yml
+/create-env.qmd
+/img
+/index.qmd
+/intro.qmd
+/references.bib
+/references.qmd
+/view-trees.qmd
