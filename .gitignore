@@ -4,3 +4,6 @@
 /img
 /references.bib
 /*.qmd
+/.quarto/
+**/*.quarto_ipynb
+/*_file
